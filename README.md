@@ -109,6 +109,29 @@ After tabbed postman is installed and is running, hit the first endpoint(/api/fe
 
 ![insert_details_output](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/insert_into_db_output.jpeg?raw==True)
 
+**Step-4**
+
+**MongoDB Data Validation**
+
+- Use following command to enter into mongodb shell interface.
+```sudo docker exec -it mongodb bash```
+
+- Login with following credentials.
+```
+username - sellerapp
+password - sellerapp
+```
+- The database name for the database used is ProductData. Use below command to enter into the database that is used in this app.
+```
+use ProductData
+```
+
+- Use below command to get the Document written inside the database.
+```
+db.PageData.find({})
+```
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

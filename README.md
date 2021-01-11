@@ -78,20 +78,31 @@ If no such application is installed. Follow following steps:
 
 **Step-3**
 
-**POST APIS required for the application**
+**POST APIs required for the application**
 
 **1. Fetch Details(/api/fetch_details)** - Accepts product's URL and scrapes required information from it.
 
 After tabbed postman is installed and is running, hit the first endpoint(/api/fetch_details) using the following steps.
-- Search *http://localhost/api/payload_to_document* into postman.
+- Search *http://localhost/api/payload_to_document* in postman.
 - Make sure you don't have any headers defined as it accepts form data as input.
 - The required output will be in the json format.
 
 ![fetch_details_output](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/fetch_details_output.jpeg?raw==True)
 
-**2. Insert Details to MongoDB(/api/payload)** - Accepts the json format as input inserts data into mongodb.
+**2. Insert Details to MongoDB(/api/payload)** - Accepts the JSON format as input inserts data into MongoDB.
 - Input Format - Example of the JSON input format : (The result of the above API can be used as an input to this API)
-
+```
+{
+	"url": "https://www.amazon.com/PlayStation-4-Pro-1TB-Console/dp/B01LOP8EZC/",
+	"product": {
+		"name": "PlayStation 4 Pro 1TB Console",
+		"imageURL": "https://images-na.ssl-images-amazon.com/images/I/41GGPRqTZtL._AC_.jpg",
+		"description": "Heighten your experiences.\n Enrich your adventures.",
+		"price": "$348.00",
+		"totalReviews": 4436
+	}
+}
+```
 ![insert_details_input](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/insert_into_db_input.jpeg?raw==True)
 
 - Returns the result as successfully inserted or gives an error if the input is not in the correct format or server goes down or any issue arises with the database.
@@ -102,5 +113,3 @@ After tabbed postman is installed and is running, hit the first endpoint(/api/fe
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
-## License

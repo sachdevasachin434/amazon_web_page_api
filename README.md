@@ -54,12 +54,14 @@ Use the following command to list the running containers once the build process 
 
 ```sudo docker ps```
 
-![docker-compose-ps-output](https://github.com/sachdevasachin434/amazon_web_scraper/blob/master/docker-compose-ps-output.png?raw==True)
+![docker-compose-ps-output](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/docker-compose-ps-output.png?raw==True)
 
 
 ## Steps to run flask application(amazon_web_scraper)
 **Step-1**
 Search the product on amazon for which scraping is required and copy its URL.
+
+![product_page](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/product_page.jpeg?raw==True)
 
 **Step-2**
 After URL is copied to clipboard open postman or any such application to hit the flask endpoint.
@@ -67,14 +69,12 @@ After URL is copied to clipboard open postman or any such application to hit the
 If no such application is installed. Follow following steps:
 1. Open Chrome Web Browser.
 2. Open [Chrome Web Store](https://chrome.google.com/webstore/category/extensions "click here").
-
 3. Search [Tabbed Postman](https://chrome.google.com/webstore/detail/tabbed-postman-rest-clien/coohjcphdfgbiolnekdpbcijmhambjff "tabbed postman").
 4. Open the extension as shown below.
-IMAGE
 5. Click on Add Extension to Chrome.
-IMAGE
 6. Open the added extension in Chrome.
-IMAGE
+
+![tabbed_postman](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/tabbed_postman.jpeg?raw==True)
 
 **Step-3**
 
@@ -87,9 +87,16 @@ After tabbed postman is installed and is running, hit the first endpoint(/api/fe
 - Make sure you don't have any headers defined as it accepts form data as input.
 - The required output will be in the json format.
 
+![fetch_details_output](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/fetch_details_output.jpeg?raw==True)
+
 **2. Insert Details to MongoDB(/api/payload)** - Accepts the json format as input inserts data into mongodb.
 - Input Format - Example of the JSON input format : (The result of the above API can be used as an input to this API)
+
+![insert_details_input](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/insert_into_db_input.jpeg?raw==True)
+
 - Returns the result as successfully inserted or gives an error if the input is not in the correct format or server goes down or any issue arises with the database.
+
+![insert_details_output](https://github.com/sachdevasachin434/amazon_web_page_api/blob/master/output/insert_into_db_output.jpeg?raw==True)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
